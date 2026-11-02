@@ -94,7 +94,7 @@ async function buscarInvitado(token) {
     try {
       await fetch(CONFIG.sheetUrl, { method: "POST", mode: "no-cors", body: JSON.stringify({ token, familia, respuestas }) });
       try { localStorage.setItem(clave, JSON.stringify(Object.fromEntries(respuestas.map((r) => [r.nombre, r.asiste])))); } catch { }
-      msg(respuestas.some((r) => r.asiste) ? "¡Listo! Gracias por confirmar 💗" : "Gracias por avisar. ¡Te vamos a extrañar!");
+      msg(respuestas.some((r) => r.asiste) ? "¡Listo! Gracias por confirmar" : "Gracias por avisar. ¡Te vamos a extrañar!");
       $("btnRsvp").textContent = "Enviar respuesta";
     } catch { msg("No se pudo enviar. Revisá tu conexión y probá de nuevo."); }
     $("btnRsvp").disabled = false;

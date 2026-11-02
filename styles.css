@@ -10,7 +10,6 @@
     --linea-fuerte: rgba(31, 74, 71, .3);
     --linea-clara: rgba(255, 255, 255, .5);
     --linea-rosa: rgba(183, 110, 121, .18);
-    --linea-champagne: rgba(201, 166, 107, .38);
     --champagne: #C9A66B;
     --serif: "Cormorant Garamond", Georgia, serif;
     --sans: "Montserrat", system-ui, sans-serif;
@@ -122,8 +121,8 @@ p {
     max-width: 32ch;
     margin: 0 auto;
     font-family: var(--serif);
-    font-size: 1.12rem;
-    font-style: italic;
+    font-size: 1.35rem;
+    font-style: normal;
     line-height: 1.7;
     opacity: .9;
     text-wrap: balance;
@@ -282,7 +281,7 @@ p {
     border: 1px solid var(--verde);
     border-radius: 999px;
     background: transparent;
-    color: var(--verde);
+    color: black;
     font: 500 .64rem/1 var(--sans);
     letter-spacing: .14em;
     text-transform: uppercase;
@@ -333,7 +332,7 @@ p {
     margin: 0 auto;
     padding: 36px 28px;
     border: 1px solid var(--linea-rosa);
-    border-radius: var(--radio);
+    border-radius: 1rem;
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
@@ -392,7 +391,7 @@ p {
     font-weight: 400;
     letter-spacing: .02em;
     text-transform: none;
-    color: var(--verde);
+    color: black;
 }
 
 .mini p {
@@ -409,7 +408,7 @@ p {
     margin: 30px auto 0;
     padding: 26px 22px 22px;
     border: 1px solid var(--linea-rosa);
-    border-radius: var(--radio);
+    border-radius: 1rem;
     background: var(--blanco);
 }
 
@@ -558,7 +557,7 @@ p {
     font-size: 0.80rem;
     font-style: italic;
     letter-spacing: .06em;
-    color: var(--verde);
+    color: black;
     text-align: center;
 }
 
@@ -729,6 +728,7 @@ dialog .btn {
 .js .rev.in {
     opacity: 1;
     transform: none;
+    color: #795548;
 }
 
 /* ===== CTA fija (mobile) ===== */
@@ -756,8 +756,8 @@ dialog .btn {
     width: 100%;
     max-width: 448px;
     margin: 0;
-    background: var(--verde);
-    border-color: var(--verde);
+    background: black;
+    border-color: black;
     color: var(--blanco);
 }
 
