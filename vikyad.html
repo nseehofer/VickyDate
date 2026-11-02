@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Panel de invitaciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <main class="panel">
+    <header class="encabezado">
+      <p class="marca">Mis XV · Victoria</p>
+      <h1>Invitaciones</h1>
+      <p class="sub">Generá un link por persona. El nombre no aparece en la URL y no se puede modificar.</p>
+    </header>
+
+    <section class="bloque">
+      <label class="campo" for="base">
+        <span>URL de la invitación</span>
+        <input id="base" type="text" placeholder="https://tusitio.com/invitacion/" autocomplete="off"
+          spellcheck="false">
+      </label>
+      <p class="ayuda">Se guarda en este navegador. Es la página que van a abrir los invitados.</p>
+    </section>
+
+    <section class="bloque">
+      <h2>Agregar persona</h2>
+      <form id="fAlta" class="alta" autocomplete="off">
+        <label class="campo" for="nombre">
+          <span>Nombre y apellido</span>
+          <input id="nombre" name="nombre" required maxlength="60" placeholder="Ana Pérez">
+        </label>
+        <button class="btn primario" type="submit">Agregar</button>
+      </form>
+      <p class="aviso" id="altaMsg" role="status"></p>
+    </section>
+
+    <section class="bloque">
+      <div class="bloque-cabecera">
+        <h2>Lista <span class="contador" id="contador">0</span></h2>
+        <div class="acciones">
+          <button class="btn" id="btnCsv" type="button">Exportar CSV</button>
+        </div>
+      </div>
+      <p class="vacio" id="vacio">Todavía no agregaste invitaciones.</p>
+      <ul class="lista" id="lista"></ul>
+    </section>
+
+    <footer class="pie-panel">
+      <p>Cada link lleva el nombre cifrado adentro: no hay nada que publicar, funciona al instante.</p>
+      <p>Los links no se pueden anular. Si editás un nombre se genera un link nuevo, y el anterior sigue mostrando el
+        nombre viejo.</p>
+      <p>La lista vive en este navegador: exportá el CSV como respaldo.</p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="token.js"></script>
+  <script src="vikyad.js"></script>
+</body>
+
+</html>

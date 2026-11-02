@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Mis XV · Victoria</title>
+  <meta name="description" content="Invitación a los XV años de Victoria.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Mis XV · Victoria">
+  <meta property="og:description" content="Invitación a los XV años de Victoria.">
+  <meta name="theme-color" content="#A65F6A">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A65F6A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23FFFFFF' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="sec rosa hero">
+      <span class="monograma" aria-hidden="true">V</span>
+      <p class="fecha" id="fechaTxt"></p>
+      <h1><span id="nombreTxt" class="nombre-reveal">Victoria</span></h1>
+      <p class="sub">Mis XV años</p>
+      <p class="txt">Te espero para celebrar este dia único e inolvidable</p>
+      <p class="aviso" id="invInvalida" role="alert" hidden></p>
+      <span class="scroll-cue" aria-hidden="true"></span>
+    </header>
+
+    <section class="sec palido" id="cuenta" aria-labelledby="cuentaTitulo">
+      <h2 id="cuentaTitulo">Falta</h2>
+      <div class="count" aria-live="off">
+        <div><b id="cd">0</b><span>días</span></div>
+        <div><b id="ch">0</b><span>hs</span></div>
+        <div><b id="cm">0</b><span>min</span></div>
+        <div><b id="cs">0</b><span>seg</span></div>
+      </div>
+    </section>
+
+    <section class="sec palido" id="fiesta" aria-labelledby="fiestaTitulo">
+      <h2 id="fiestaTitulo">Fiesta</h2>
+      <div class="card">
+        <h3>Día</h3>
+        <p id="diaTxt"></p>
+        <a class="btn" id="btnAgenda" target="_blank" rel="noopener">Agendar</a>
+        <h3>Lugar</h3>
+        <p id="lugarTxt"></p>
+        <h3>Dirección</h3>
+        <p id="dirTxt"></p>
+        <a class="btn" id="btnMapa" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </section>
+
+    <section class="sec palido" id="confirmar" aria-labelledby="rsvpTitulo">
+      <h2 id="rsvpTitulo">Confirmación de asistencia</h2>
+      <p class="txt">Tu presencia es importante para mi, por eso necesito saber si...</p>
+      <form id="fRsvp" class="rsvp">
+        <div id="rsvpLista"></div>
+        <button class="btn" type="submit" id="btnRsvp">Confirmar</button>
+      </form>
+      <p class="aviso" id="rsvpMsg" role="status"></p>
+    </section>
+
+    <section class="sec palido" id="detalles" aria-labelledby="detallesTitulo">
+      <h2 id="detallesTitulo">Detalles de la fiesta</h2>
+      <div class="grid3">
+        <article class="card mini">
+          <span class="icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="7" cy="17.5" r="2.5" />
+              <circle cx="17" cy="15.5" r="2.5" />
+              <path d="M9.5 17.5V6l10-2v11.5" />
+            </svg>
+          </span>
+          <h3>Música</h3>
+          <p>¿Qué canción no puede faltar en la playlist?</p>
+          <button class="btn" data-modal="mMusica">Sugerir canción</button>
+        </article>
+        <article class="card mini">
+          <span class="icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 3.5 8 8l-2.6 9.8a1 1 0 0 0 1 1.2h11.2a1 1 0 0 0 1-1.2L16 8l-1-4.5" />
+              <path d="M9 3.5c0 1.6 1.3 2.6 3 2.6s3-1 3-2.6" />
+            </svg>
+          </span>
+          <h3>Vestimenta</h3>
+          <p>Una sugerencia para que todos estemos a tono</p>
+          <button class="btn" data-modal="mDress">Ver más</button>
+        </article>
+        <article class="card mini">
+          <span class="icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M6.5 4h11l-1.6 6.2a4 4 0 0 1-7.8 0L6.5 4z" />
+              <path d="M12 13.8V20" />
+              <path d="M8.8 20h6.4" />
+            </svg>
+          </span>
+          <h3>Tips</h3>
+          <p>Horarios, estacionamiento y cosas útiles</p>
+          <button class="btn" data-modal="mTips">Ver más</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec palido" id="regalos" aria-labelledby="regalosTitulo">
+      <h2 id="regalosTitulo">Regalos</h2>
+      <p class="txt">Tu presencia es mi mejor regalo. Si querés tener un detalle, te comparto mis datos</p>
+      <label class="alias" for="aliasInp">Alias de la cuenta
+        <span><input id="aliasInp" type="text" readonly><button class="btn" id="btnCopiar"
+            type="button">Copiar</button></span>
+      </label>
+      <p class="aviso" id="copiado" role="status"></p>
+    </section>
+
+
+    <footer class="sec rosa pie">
+      <span class="monograma" aria-hidden="true">V</span>
+      <p class="firma"><span id="nombreFirma">Victoria</span><br><small>Mis XV años</small></p>
+    </footer>
+
+  </main>
+
+  <div class="cta-fija" id="ctaFija">
+    <a class="btn" href="#confirmar">Ir a confirmar asistencia</a>
+  </div>
+
+  <dialog id="mMusica">
+    <form method="dialog" class="cerrar"><button aria-label="Cerrar">✕</button></form>
+    <h3>Sugerir canción</h3>
+    <form id="fMusica">
+      <label>Canción<input name="cancion" required maxlength="80"></label>
+      <label>Artista<input name="artista" required maxlength="80"></label>
+      <button class="btn" type="submit">Enviar sugerencia</button>
+    </form>
+    <p class="aviso" id="musicaMsg" role="status"></p>
+  </dialog>
+
+  <dialog id="mDress">
+    <form method="dialog" class="cerrar"><button aria-label="Cerrar">✕</button></form>
+    <h3>Dress code</h3>
+    <p>Elegante. Te sugerimos tonos que acompañen la noche; el rosa pastel queda reservado para la quinceañera.</p>
+  </dialog>
+
+  <dialog id="mTips">
+    <form method="dialog" class="cerrar"><button aria-label="Cerrar">✕</button></form>
+    <h3>Tips</h3>
+    <p>Llegá a horario para el recibimiento y no perderte lo mas importante, recordá que hay pileta y llevá abrigo
+      por si refresca.</p>
+  </dialog>
+
+  <div class="toast" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="token.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
