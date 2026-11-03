@@ -278,7 +278,7 @@ p {
     justify-content: center;
     min-height: 42px;
     padding: 10px 24px;
-    border: 1px solid var(--verde);
+    border: 1px solid #795548;
     border-radius: 999px;
     background: transparent;
     color: black;
@@ -292,7 +292,7 @@ p {
 
 .btn:hover {
     background: rgba(31, 74, 71, .07);
-    border-color: var(--verde);
+    border-color: #795548;
     color: var(--verde);
 }
 
@@ -435,10 +435,11 @@ p {
     display: block;
     margin-bottom: 10px;
     font-family: var(--serif);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.50rem;
     letter-spacing: .02em;
     text-align-last: center;
+    color: #38272A;
 }
 
 .opc {
@@ -481,7 +482,7 @@ p {
 
 .opc input:checked+span {
     background: rgba(31, 74, 71, .08);
-    color: var(--verde);
+    color: black;
     font-weight: 500;
 }
 
@@ -645,16 +646,16 @@ dialog {
     margin: auto;
     padding: 36px 28px 30px;
     border: 1px solid var(--linea-rosa);
-    border-radius: 4px;
+    border-radius: 1rem;
     background: var(--blanco);
-    color: var(--verde);
+    color: #795548;
     text-align: center;
     box-shadow: 0 30px 80px rgba(56, 39, 42, .22);
     animation: pop .25s ease;
 }
 
 dialog::backdrop {
-    background: rgba(31, 74, 71, .5);
+    background: rgba(223, 182, 209, 0.37);
     backdrop-filter: blur(3px);
 }
 
@@ -662,6 +663,7 @@ dialog h3 {
     font-size: 1.35rem;
     font-weight: 400;
     margin-bottom: 4px;
+    color: black;
 }
 
 dialog p {
@@ -682,6 +684,7 @@ dialog label {
 
 dialog label input {
     margin-top: 6px;
+    border-radius: 2rem;
 }
 
 dialog .btn {
