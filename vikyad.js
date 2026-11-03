@@ -28,7 +28,7 @@ function guardar() {
 function normalizarBase(valor) {
   const s = String(valor || "").trim();
   if (!s) return "";
-  return /^https?:\/\//i.test(s) ? s : "" + s;
+  return /^https?:\/\//i.test(s) ? s : "https" + s;
 }
 
 function linkDe(token) {
