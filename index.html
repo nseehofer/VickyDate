@@ -24,7 +24,9 @@
 <body>
   <main class="wrap">
 
-    <header class="sec rosa hero">
+    <header class="sec rosa hero" id="inicio">
+      <img class="hero-fondo" src="viky2.jpeg" alt="" aria-hidden="true" width="853" height="1280" decoding="async">
+
       <span class="monograma" aria-hidden="true">V</span>
       <p class="fecha" id="fechaTxt"></p>
       <h1><span id="nombreTxt" class="nombre-reveal">Victoria</span></h1>
@@ -124,9 +126,17 @@
 
 
     <footer class="sec rosa pie">
-      <span class="monograma" aria-hidden="true" style="color:white">V</span>
-      <p class="firma"><span id="nombreFirma" style="color:white">Victoria</span><br><small style="color:white">Mis XV
-          años</small></p>
+      <div class="pie-firma">
+        <span class="monograma" aria-hidden="true">V</span>
+        <p class="firma"><span id="nombreFirma">Victoria</span><br><small>Mis XV años</small></p>
+      </div>
+      <nav class="pie-nav" aria-label="Secciones de la invitación">
+        <a href="#inicio">Inicio</a>
+        <a href="#cuenta">Cuenta regresiva</a>
+        <a href="#fiesta">La fiesta</a>
+        <a href="#detalles">Detalles</a>
+        <a href="#regalos">Regalos</a>
+      </nav>
     </footer>
 
   </main>
@@ -149,7 +159,7 @@
   <dialog id="mDress">
     <form method="dialog" class="cerrar"><button aria-label="Cerrar">✕</button></form>
     <h3>Dress code</h3>
-    <p>Elegante. Te sugerimos tonos que acompañen la noche; el rosa pastel queda reservado para la quinceañera.</p>
+    <p>Elegante sport, un traje de baño y abrigo para mas tarde.</p>
   </dialog>
 
   <dialog id="mTips">

@@ -126,15 +126,12 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-/* Barra fija de confirmación (sólo mobile) */
+/* Barra fija de confirmación (sólo mobile):
+   aparece al pasar el hero y se mantiene hasta el final, footer incluido */
 const cta = $("ctaFija");
 const hero = document.querySelector(".hero");
-const pie = document.querySelector(".pie");
 if (cta && hero && "IntersectionObserver" in window) {
-  let pasoHero = false, enPie = false;
-  const pintarCta = () => cta.classList.toggle("visible", pasoHero && !enPie);
-  new IntersectionObserver(([e]) => { pasoHero = !e.isIntersecting; pintarCta(); }).observe(hero);
-  if (pie) new IntersectionObserver(([e]) => { enPie = e.isIntersecting; pintarCta(); }).observe(pie);
+  new IntersectionObserver(([e]) => cta.classList.toggle("visible", !e.isIntersecting)).observe(hero);
 }
 
 /* Modales */
