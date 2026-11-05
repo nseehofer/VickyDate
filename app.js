@@ -34,7 +34,7 @@ document.title = `Mis XV · ${CONFIG.nombre}`;
 
 /* Textos de fecha, lugar, enlaces */
 $("fechaTxt").textContent = fecha.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" }).replaceAll("/", ".");
-$("diaTxt").textContent = `${fmt({ weekday: "long", day: "numeric", month: "long" })} · ${fecha.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" })} hs`;
+$("diaTxt").textContent = `${fmt({ weekday: "long", day: "numeric", month: "long" })} · ${fecha.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} hs`;
 $("lugarTxt").textContent = CONFIG.lugar;
 $("dirTxt").textContent = CONFIG.direccion;
 $("aliasInp").value = CONFIG.alias;

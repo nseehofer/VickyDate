@@ -459,7 +459,7 @@ p {
     padding: 38px 24px 32px;
     border: 1px solid var(--linea-rosa);
     border-radius: 1.25rem;
-    background: linear-gradient(180deg, rgb(253 121 142 / 25%), rgb(255 160 0 / 5%));
+    background: rgb(170 170 170 / 44%);
 }
 
 #detalles .vestimenta .icono {
