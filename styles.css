@@ -445,6 +445,66 @@ p {
     color: var(--gris);
 }
 
+/* ===== Detalles: vestimenta destacada ===== */
+#detalles .eyebrow {
+    margin-bottom: 14px;
+    font: 500 .58rem/1 var(--sans);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--rosa-osc);
+}
+
+#detalles .vestimenta {
+    margin-bottom: 28px;
+    padding: 38px 24px 32px;
+    border: 1px solid var(--linea-rosa);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, rgb(253 121 142 / 25%), rgb(255 160 0 / 5%));
+}
+
+#detalles .vestimenta .icono {
+    opacity: 1;
+}
+
+#detalles .vestimenta .etiqueta {
+    background: black;
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    border: 1px solid rgba(201, 166, 107, .45);
+    border-radius: 999px;
+    font: 500 .54rem / 1 var(--sans);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#detalles .vestimenta h3 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    color: var(--gris);
+}
+
+#detalles .vestimenta .dress {
+    margin: 0 auto;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.3;
+    color: var(--rosa-osc);
+}
+
+#detalles .vestimenta .mini-nota {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font: 500 .56rem/1.7 var(--sans);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gris);
+    opacity: .8;
+}
+
 /* ===== RSVP ===== */
 .rsvp {
     max-width: 360px;
@@ -530,7 +590,7 @@ p {
 }
 
 .opc input:focus-visible+span {
-    outline: 2px solid var(--verde);
+    outline: 2px solid #38272A;
     outline-offset: 2px;
 }
 
@@ -565,7 +625,7 @@ p {
     margin-top: 12px;
     font-size: .74rem;
     letter-spacing: .03em;
-    color: var(--verde);
+    color: #38272A;
 }
 
 .rosa .aviso {
@@ -927,7 +987,7 @@ dialog .btn {
     transform: translate(-50%, 20px);
     padding: 11px 20px;
     border-radius: 999px;
-    background: var(--verde);
+    background: #38272A;
     color: var(--blanco);
     font-size: .72rem;
     letter-spacing: .04em;

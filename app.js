@@ -1,11 +1,11 @@
 /* ===== CONFIGURACIÓN: editá sólo este bloque ===== */
 const CONFIG = {
   nombre: "Victoria",
-  fecha: "2026-12-07T21:30:00-03:00",
+  fecha: "2026-12-07T14:00:00-03:00",
   duracionHs: 6,
-  lugar: "Salón Las Acacias",
-  direccion: "Av. Ejemplo 1234, Buenos Aires",
-  alias: "alas.pato.vino",
+  lugar: "Quinta Raices Eternas ",
+  direccion: "Ciudadela 6898, Virrey del Pino",
+  alias: "victoriafalce.xv",
   sheetUrl: "https://script.google.com/macros/s/AKfycbxWHZoNHEbWgQgPcVgVlgVoSZw-jjC6R94eo1Xbf4cFndTe-kOIli7PnteL0uCSECAt/exec", // URL de la app web de Google Apps Script (ver apps-script.gs)
   invitadosPorDefecto: ["Invitado/a"]
 };
@@ -92,7 +92,7 @@ async function buscarInvitado(token) {
     const respuestas = invitados.map((n, i) => ({ nombre: n, asiste: f.get("p" + i) === "si" }));
     $("btnRsvp").disabled = true; msg("Enviando…");
     try {
-      await fetch(CONFIG.sheetUrl, { method: "POST", mode: "no-cors", body: JSON.stringify({ token, familia, respuestas }) });
+      await fetch(CONFIG.sheetUrl, { method: "POST", mode: "no-cors", body: JSON.stringify({ token, respuestas }) });
       try { localStorage.setItem(clave, JSON.stringify(Object.fromEntries(respuestas.map((r) => [r.nombre, r.asiste])))); } catch { }
       msg(respuestas.some((r) => r.asiste) ? "¡Listo! Gracias por confirmar" : "Gracias por avisar. ¡Te vamos a extrañar!");
       $("btnRsvp").textContent = "Enviar respuesta";

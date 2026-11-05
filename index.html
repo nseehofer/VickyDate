@@ -10,6 +10,13 @@
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Mis XV · Victoria">
   <meta property="og:description" content="Invitación a los XV años de Victoria.">
+  <meta property="og:url" content="https://mavixv.netlify.app/">
+  <meta property="og:image" content="https://mavixv.netlify.app/viky2.jpeg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="850">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Invitación a los XV años de Victoria">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#A65F6A">
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A65F6A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23FFFFFF' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
@@ -25,7 +32,7 @@
   <main class="wrap">
 
     <header class="sec rosa hero" id="inicio">
-      <img class="hero-fondo" src="viky2.jpeg" alt="" aria-hidden="true" width="853" height="1280" decoding="async">
+      <img class="hero-fondo" src="viky2.jpeg" alt="" aria-hidden="true" width="850" height="1280" decoding="async">
 
       <span class="monograma" aria-hidden="true">V</span>
       <p class="fecha" id="fechaTxt"></p>
@@ -62,7 +69,7 @@
 
     <section class="sec palido" id="confirmar" aria-labelledby="rsvpTitulo">
       <h2 id="rsvpTitulo">Confirmación de asistencia</h2>
-      <p class="txt">Tu presencia es importante para mi, por eso necesito saber si...</p>
+      <p class="txt">Tu presencia es importante para mi, por eso necesito tu confirmación...</p>
       <form id="fRsvp" class="rsvp">
         <div id="rsvpLista"></div>
         <button class="btn" type="submit" id="btnRsvp">Confirmar</button>
@@ -71,7 +78,28 @@
     </section>
 
     <section class="sec palido" id="detalles" aria-labelledby="detallesTitulo">
+      <p class="eyebrow">Información importante</p>
       <h2 id="detallesTitulo">Detalles de la fiesta</h2>
+
+      <article class="card mini vestimenta">
+        <div class="vestimenta-etq">
+          <span class="icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 3.5 8 8l-2.6 9.8a1 1 0 0 0 1 1.2h11.2a1 1 0 0 0 1-1.2L16 8l-1-4.5" />
+              <path d="M9 3.5c0 1.6 1.3 2.6 3 2.6s3-1 3-2.6" />
+            </svg>
+          </span>
+          <span class="etiqueta">Importante</span>
+          <h3>Vestimenta</h3>
+        </div>
+        <div class="vestimenta-cuerpo">
+          <p class="dress">Elegante sport</p>
+          <p class="mini-nota">Evitá el blanco · traje de baño · abrigo</p>
+          <button class="btn" data-modal="mDress">Ver más</button>
+        </div>
+      </article>
+
       <div class="grid3">
         <article class="card mini">
           <span class="icono" aria-hidden="true">
@@ -85,18 +113,6 @@
           <h3>Música</h3>
           <p>¿Qué canción no puede faltar en la playlist?</p>
           <button class="btn" data-modal="mMusica">Sugerir canción</button>
-        </article>
-        <article class="card mini">
-          <span class="icono" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M9 3.5 8 8l-2.6 9.8a1 1 0 0 0 1 1.2h11.2a1 1 0 0 0 1-1.2L16 8l-1-4.5" />
-              <path d="M9 3.5c0 1.6 1.3 2.6 3 2.6s3-1 3-2.6" />
-            </svg>
-          </span>
-          <h3>Vestimenta</h3>
-          <p>Una sugerencia para que todos estemos a tono</p>
-          <button class="btn" data-modal="mDress">Ver más</button>
         </article>
         <article class="card mini">
           <span class="icono" aria-hidden="true">
@@ -159,7 +175,7 @@
   <dialog id="mDress">
     <form method="dialog" class="cerrar"><button aria-label="Cerrar">✕</button></form>
     <h3>Dress code</h3>
-    <p>Elegante sport, un traje de baño y abrigo para mas tarde.</p>
+    <p>Elegante sport, evitá usar color BLANCO, un traje de baño y abrigo para mas tarde.</p>
   </dialog>
 
   <dialog id="mTips">

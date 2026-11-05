@@ -26,17 +26,18 @@ function guardarRespuestas(ss, d) {
   if (!Array.isArray(d.respuestas)) return texto("sin-respuestas");
 
   const sh = ss.getSheetByName("Respuestas") || ss.insertSheet("Respuestas");
-  if (sh.getLastRow() === 0) sh.appendRow(["Actualizado", "Familia", "Invitado", "Asistencia"]);
+  if (sh.getLastRow() === 0) sh.appendRow(["Actualizado", "Invitado", "Asistencia"]);
 
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
     const filas = sh.getDataRange().getValues();
     d.respuestas.forEach((r) => {
-      const fila = [new Date(), String(d.familia).slice(0, 80), String(r.nombre).slice(0, 80), r.asiste ? "Va" : "No va"];
-      const i = filas.findIndex((x, k) => k > 0 && x[1] === fila[1] && x[2] === fila[2]);
+      const nombre = String(r.nombre).slice(0, 80);
+      const fila = [new Date(), nombre, r.asiste ? "Va" : "No va"];
+      const i = filas.findIndex((x, k) => k > 0 && x[1] === nombre);
       if (i > 0) {
-        sh.getRange(i + 1, 1, 1, 4).setValues([fila]);
+        sh.getRange(i + 1, 1, 1, 3).setValues([fila]);
       } else {
         sh.appendRow(fila);
         filas.push(fila);
